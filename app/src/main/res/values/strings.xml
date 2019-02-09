@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VolleyMultipleRequest</string>
+    <string name="print_response">print response</string>
+</resources>
