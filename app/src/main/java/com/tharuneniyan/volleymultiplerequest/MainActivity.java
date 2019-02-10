@@ -10,15 +10,13 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-
-
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity implements VolleyResponse {
 
     private Button btnSendRequest;
-    private String url = "http://www.mocky.io/v2/5c5efba2320000bd0c40b454";
-    private String url2 = "http://www.mocky.io/v2/5c5f1e44320000c00c40b47f";
+    private String url = "https://simplifiedcoding.net/demos/view-flipper/heroes.php";
+//    private String url2 = "http://www.mocky.io/v2/5c5f1e44320000c00c40b47f";
     private RequestQueue mRequestQueue;
     private StringRequest stringRequest;
     private String TAG = MainActivity.class.getName();
@@ -42,11 +40,11 @@ public class MainActivity extends AppCompatActivity implements VolleyResponse {
 
        CustomJSONObjectRequest request1 = new CustomJSONObjectRequest(Request.Method.GET, url,
                 new JSONObject(), "YOUR REQUEST TAG",  this);
-        CustomJSONObjectRequest request2 = new CustomJSONObjectRequest(Request.Method.GET, url2,
-                new JSONObject(), "YOUR REQUEST TAG",  this);
+       /* CustomJSONObjectRequest request2 = new CustomJSONObjectRequest(Request.Method.GET, url2,
+                new JSONObject(), "YOUR REQUEST TAG",  this);*/
 
         mRequestQueue.add(request1.getJsonObjectRequest());
-        mRequestQueue.add(request2.getJsonObjectRequest());
+//        mRequestQueue.add(request2.getJsonObjectRequest());
     }
 
     @Override

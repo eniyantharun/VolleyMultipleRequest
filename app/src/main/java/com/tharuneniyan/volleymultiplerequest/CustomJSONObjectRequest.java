@@ -12,14 +12,11 @@ public class CustomJSONObjectRequest implements Response.Listener<JSONObject>, R
     private String tag;
     private JsonObjectRequest jsonObjectRequest;
 
-
     public CustomJSONObjectRequest(int method, String url, JSONObject jsonObject, String tag, VolleyResponse volleyResponse) {
         this.volleyResponse = volleyResponse;
         this.tag= tag;
         jsonObjectRequest = new JsonObjectRequest(method, url, jsonObject, this, this);
     }
-
-
 
     @Override
     public void onResponse(JSONObject response) {
